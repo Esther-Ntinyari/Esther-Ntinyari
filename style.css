@@ -34,8 +34,17 @@ header {
 }
 
 .topnav {
-    overflow: hidden !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
     border-bottom: 1px solid var(--text-color);
+    flex-wrap: nowrap; /* Ensure links do not wrap */
+}
+
+.topnav .icon {
+    display: none;
+    float: left;
 }
 
 .topnav a {
@@ -44,8 +53,7 @@ header {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin: 50px;
-    margin-bottom: 5px;
+    margin: 0 10px; /* Adjust margin to fit within the container */
     object-position: top;
 }
 
@@ -80,6 +88,7 @@ header {
 .home {
     display: flex;
     margin: 10px;
+    flex-wrap: wrap;
 }
 
 .gallery {
@@ -161,4 +170,66 @@ i {
     right: -10px;
     border-left: none;
     border-top: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 800px) {
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topnav a {
+        font-size: small;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .topnav a {
+        flex-wrap: wrap;
+        font-size: small;
+        padding: 5px 10px;
+        text-align: center;
+        justify-content: center;
+    
+    }
+
+    .home .name {
+        font-size: 24px;
+    }
+
+    .typing {
+        font-size: 4vw;
+    }
 }

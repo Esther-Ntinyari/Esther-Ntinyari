@@ -9,6 +9,16 @@ function Mode() {
         icon.classList.add("fa-moon-o");
     }
 }
+
+function toggleMenu() {
+    var x = document.getElementById("navigation");
+    if (x.className === "topnav") {
+        x.className += "responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     var options = {
         strings: ["Fashion Model", "Professional Trainer", "Panelist"],
