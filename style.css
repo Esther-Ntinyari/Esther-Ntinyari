@@ -19,6 +19,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     align-items: center;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -40,6 +41,7 @@ header {
     overflow: hidden;
     border-bottom: 1px solid var(--text-color);
     flex-wrap: nowrap; /* Ensure links do not wrap */
+    
 }
 
 .topnav .icon {
